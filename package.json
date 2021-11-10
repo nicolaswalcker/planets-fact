@@ -1,0 +1,35 @@
+{
+  "name": "basic-project-template",
+  "version": "1.0.0",
+  "description": "Template for little and basic projects.",
+  "main": "app.js",
+  "repository": "https://github.com/nicolaswalcker/basic-project-template",
+  "author": "Nicolas Walcker",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run dev",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "fix-styles": "stylelint --fix src/**/*.{css,scss}"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "prettier": "^2.4.1",
+    "sass": "^1.43.4",
+    "stylelint": "^14.0.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended": "^6.0.0",
+    "stylelint-config-recommended-scss": "^5.0.1",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.0.0"
+  },
+  "dependencies": {
+    "parcel": "^2.0.1"
+  }
+}
