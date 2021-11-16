@@ -14,9 +14,176 @@
     />
   </head>
   <body>
-    <section class="c-section">
-      <h1 class="c-h1">Olá</h1>
-      <p class="c-description">Este é o Basic Project Template</p>
-    </section>
+    <header class="l-header">
+      <h1 class="c-header__text">The planets</h1>
+      <nav class="c-header__nav">
+        <ul class="c-nav__list">
+          <li class="c-nav__item">
+            <label for="mercury">
+              Mercury
+              <input
+                type="radio"
+                id="mercury"
+                name="radio"
+                class="c-nav__button"
+                value="0"
+              />
+            </label>
+          </li>
+          <li class="c-nav__item">
+            <label for="venus">
+              venus
+              <input
+                type="radio"
+                id="venus"
+                name="radio"
+                class="c-nav__button"
+                value="1"
+              />
+            </label>
+          </li>
+          <li class="c-nav__item">
+            <label for="earth">
+              earth
+              <input
+                type="radio"
+                id="earth"
+                name="radio"
+                class="c-nav__button"
+                value="2"
+              />
+            </label>
+          </li>
+          <li class="c-nav__item">
+            <label for="mars">
+              mars
+              <input
+                type="radio"
+                id="mars"
+                name="radio"
+                class="c-nav__button"
+                value="3"
+              />
+            </label>
+          </li>
+          <li class="c-nav__item">
+            <label for="jupiter">
+              jupiter
+              <input
+                type="radio"
+                id="jupiter"
+                name="radio"
+                class="c-nav__button"
+                value="4"
+              />
+            </label>
+          </li>
+          <li class="c-nav__item">
+            <label for="saturn">
+              saturn
+              <input
+                type="radio"
+                id="saturn"
+                name="radio"
+                class="c-nav__button"
+                value="5"
+              />
+            </label>
+          </li>
+          <li class="c-nav__item">
+            <label for="uranus">
+              uranus
+              <input
+                type="radio"
+                id="uranus"
+                name="radio"
+                class="c-nav__button"
+                value="6"
+              />
+            </label>
+          </li>
+          <li class="c-nav__item">
+            <label for="neptune">
+              neptune
+              <input
+                type="radio"
+                id="neptune"
+                name="radio"
+                class="c-nav__button"
+                value="6"
+              />
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="l-main">
+      <img src="#" alt="Planet image" class="c-planet__image js-image--initial" />
+      <img src="#" alt="Planet image" class="c-planet__content-image js-image--internal" />
+      <img src="#" alt="Planet image" class="c-planet__content-image js-image--geology" />
+      <div class="c-planet__infos">
+        <h2 class="c-planet__name js-name"></h2>
+        <p class="c-planet__content js-content"></p>
+        <a href="" class="c-content__link js-link">Wikipedia</a>
+        <nav class="c-infos__nav">
+          <ul class="c-info__items">
+            <li class="c-info__item">
+              <label class="c-info__item--label" for="overview"
+                ><span class="c-info__item--number">01</span
+                ><span class="c-info__item--text">overview</span>
+                <input
+                  type="radio"
+                  name="info-button"
+                  id="overview"
+                  value="overview"
+                />
+              </label>
+            </li>
+            <li class="c-info__item">
+              <label class="c-info__item--label" for="structure"
+                ><span class="c-info__item--number">02</span
+                ><span class="c-info__item--text">internal structure</span>
+                <input
+                  type="radio"
+                  name="info-button"
+                  id="structure"
+                  value="structure"
+              /></label>
+            </li>
+            <li class="c-info__item">
+              <label class="c-info__item--label" for="surface"
+                ><span class="c-info__item--number">03</span
+                ><span class="c-info__item--text">surface geology</span>
+                <input
+                  type="radio"
+                  name="info-button"
+                  id="surface"
+                  value="geology"
+              /></label>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+    <footer class="l-footer">
+      <section class="c-footer__item">
+        <h1 class="c-item__name">rotation time</h1>
+        <p class="c-item__data js-rotation"></p>
+      </section>
+      <section class="c-footer__item">
+        <h1 class="c-item__name">revolution time</h1>
+        <p class="c-item__data js-revolution"></p>
+      </section>
+      <section class="c-footer__item">
+        <h1 class="c-item__name">radius</h1>
+        <p class="c-item__data js-radius"></p>
+      </section>
+      <section class="c-footer__item">
+        <h1 class="c-item__name">average temp.</h1>
+        <p class="c-item__data js-temperature"></p>
+      </section>
+    </footer>
+    <script type="module" src="./main.js"></script>
   </body>
+
 </html>
