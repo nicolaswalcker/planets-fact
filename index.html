@@ -9,119 +9,116 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="c-shooting-stars js-shooting-stars"></div>
     <header class="l-header">
-      <h1 class="c-header__text">The planets</h1>
+      <h1 class="c-header__title u-uppercase">The planets</h1>
+      <button class="c-mobile__button js-mobile"></button>
       <nav class="c-header__nav">
         <ul class="c-nav__list">
-          <li class="c-nav__item">
-            <label for="mercury">
-              Mercury
-              <input
-                type="radio"
-                id="mercury"
-                name="radio"
-                class="c-nav__button"
-                value="0"
-              />
-            </label>
+          <li class="c-nav__item u-uppercase">
+            <input
+              type="radio"
+              id="mercury"
+              name="radio"
+              class="c-nav__button c-mercury"
+              value="0"
+            />
+            <label for="mercury">mercury</label>
           </li>
-          <li class="c-nav__item">
-            <label for="venus">
-              venus
-              <input
-                type="radio"
-                id="venus"
-                name="radio"
-                class="c-nav__button"
-                value="1"
-              />
-            </label>
+          <li class="c-nav__item u-uppercase">
+            <input
+              type="radio"
+              id="venus"
+              name="radio"
+              class="c-nav__button c-venus"
+              value="1"
+            />
+            <label for="venus">venus</label>
           </li>
-          <li class="c-nav__item">
-            <label for="earth">
-              earth
-              <input
-                type="radio"
-                id="earth"
-                name="radio"
-                class="c-nav__button"
-                value="2"
-              />
-            </label>
+          <li class="c-nav__item u-uppercase">
+            <input
+              type="radio"
+              id="earth"
+              name="radio"
+              class="c-nav__button c-earth"
+              value="2"
+            />
+            <label for="earth">earth</label>
           </li>
-          <li class="c-nav__item">
-            <label for="mars">
-              mars
-              <input
-                type="radio"
-                id="mars"
-                name="radio"
-                class="c-nav__button"
-                value="3"
-              />
-            </label>
+          <li class="c-nav__item u-uppercase">
+            <input
+              type="radio"
+              id="mars"
+              name="radio"
+              class="c-nav__button c-mars"
+              value="3"
+            />
+            <label for="mars">mars</label>
           </li>
-          <li class="c-nav__item">
-            <label for="jupiter">
-              jupiter
-              <input
-                type="radio"
-                id="jupiter"
-                name="radio"
-                class="c-nav__button"
-                value="4"
-              />
-            </label>
+          <li class="c-nav__item u-uppercase">
+            <input
+              type="radio"
+              id="jupiter"
+              name="radio"
+              class="c-nav__button c-jupiter"
+              value="4"
+            />
+            <label for="jupiter">jupiter</label>
           </li>
-          <li class="c-nav__item">
-            <label for="saturn">
-              saturn
-              <input
-                type="radio"
-                id="saturn"
-                name="radio"
-                class="c-nav__button"
-                value="5"
-              />
-            </label>
+          <li class="c-nav__item u-uppercase">
+            <input
+              type="radio"
+              id="saturn"
+              name="radio"
+              class="c-nav__button c-saturn"
+              value="5"
+            />
+            <label for="saturn">saturn</label>
           </li>
-          <li class="c-nav__item">
-            <label for="uranus">
-              uranus
-              <input
-                type="radio"
-                id="uranus"
-                name="radio"
-                class="c-nav__button"
-                value="6"
-              />
-            </label>
+          <li class="c-nav__item u-uppercase ">
+            <input
+              type="radio"
+              id="uranus"
+              name="radio"
+              class="c-nav__button c-uranus"
+              value="6"
+            />
+            <label for="uranus">uranus</label>
           </li>
-          <li class="c-nav__item">
-            <label for="neptune">
-              neptune
-              <input
-                type="radio"
-                id="neptune"
-                name="radio"
-                class="c-nav__button"
-                value="7"
-              />
-            </label>
+          <li class="c-nav__item u-uppercase">
+            <input
+              type="radio"
+              id="neptune"
+              name="radio"
+              class="c-nav__button c-neptune"
+              value="7"
+            />
+            <label for="neptune">neptune</label>
           </li>
         </ul>
       </nav>
     </header>
     <main class="l-main">
-      <img src="#" alt="Planet image" class="c-planet__image js-image--initial" />
-      <img src="#" alt="Planet image" class="c-planet__content-image js-image--internal" />
-      <img src="#" alt="Planet image" class="c-planet__content-image js-image--geology" />
+      <img
+        src="#"
+        alt="Planet image"
+        class="c-planet__image js-image--initial"
+      />
+      <img
+        src="#"
+        alt="Planet image"
+        class="c-planet__content-image js-image--internal"
+      />
+      <img
+        src="#"
+        alt="Planet image"
+        class="c-planet__content-image js-image--geology"
+      />
       <div class="c-planet__infos">
         <h2 class="c-planet__name js-name"></h2>
         <p class="c-planet__content js-content"></p>
@@ -185,8 +182,7 @@
       </section>
     </footer>
     <!-- <script src="./node_modules/animejs/lib/anime.min.js"></script> -->
-    <script type="module" src="./src/js/animations.js"></script>
+    <script type="module" src="./src/js/mobilebutton.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
-
 </html>

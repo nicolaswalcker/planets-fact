@@ -73,9 +73,12 @@ sub {
 // ==========================================================================
 
 body {
+  display: grid;
   font-family: Nunito, -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   font-size: $global-font-size;
+  background-color: $black;
+  grid-template-rows: auto 1fr auto;
 }
 
 // Show focus styles on keyboard focus
@@ -87,7 +90,13 @@ body {
 
 // ::-moz-selection {
 // }
-
+li {
+  list-style-type: none;
+}
+input {
+  display: none;
+  visibility: hidden;
+}
 // input::placeholder {}
 // textarea::placeholder {}
 // input::-webkit-input-placeholder {}

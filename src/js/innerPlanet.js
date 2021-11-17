@@ -46,7 +46,6 @@ export const innerPlanet = (
           imageGeology.classList.remove("image-active");
           imageInternal.classList.remove("image-active");
           htmlContentOptions[i].checked = true;
-
           break;
         case "structure":
           htmlContent.innerHTML = structureContent;

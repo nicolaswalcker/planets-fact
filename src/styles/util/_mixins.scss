@@ -1,0 +1,44 @@
+@mixin resetButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+@mixin buttonConfig($translate) {
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  content: "";
+  background: $white;
+  transition: 0.2s all ease;
+  transform: translateY($translate);
+}
+@mixin navbarEffect($top, $left, $color, $width) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  z-index: -1;
+  width: $width;
+  height: 5px;
+  content: "";
+  background-color: $color;
+}
+
+@mixin navbarBefore($color) {
+  &::before {
+    transition: all 0.2s ease-in-out;
+    @include breakpoint(small-up) {
+      @include navbarEffect(180%, 0, $color, 0);
+    }
+    @include breakpoint(large-up) {
+      @include navbarEffect(-290%, 0, $color, 0);
+    }
+  }
+  &:hover::before {
+    @include breakpoint(small-up) {
+      @include navbarEffect(180%, 0, $color, 100%);
+    }
+    @include breakpoint(large-up) {
+      @include navbarEffect(-290%, 0, $color, 100%);
+    }
+  }
+}

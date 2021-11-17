@@ -1,0 +1,102 @@
+.l-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 70px;
+  padding: 0.75rem 1rem 0 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  @include breakpoint(small-up) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @include breakpoint(large-up) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.c-nav__list {
+  display: none;
+  @include breakpoint(small-up) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+  }
+}
+.c-header__nav {
+  display: none;
+  width: 70%;
+  @include breakpoint(small-up) {
+    display: block;
+    width: 100%;
+  }
+  @include breakpoint(large-up) {
+    display: block;
+    width: 70%;
+  }
+}
+.c-nav__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  font-family: "Spartan", helvetica, arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: $white;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@each $color in $colors {
+  .c-nav__item:nth-child(#{index($colors, $color)}) {
+    @include navbarBefore($color);
+  }
+  input[value="#{index($colors, $color) - 1}"]:checked + label {
+    color: $color;
+  }
+}
+
+.c-header__title {
+  font-family: "Antonio", helvetica, arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: $white;
+}
+
+.c-mobile__button {
+  @include breakpoint(small-up) {
+    display: none;
+  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  transition: 0.2s all ease;
+  @include resetButton;
+  &::before {
+    @include buttonConfig(-10px);
+    box-shadow: 0 10px 0 $white;
+  }
+  &::after {
+    @include buttonConfig(10px);
+  }
+}
+.c-mobile__button.u-button--active {
+  z-index: 11;
+  &::before {
+    box-shadow: 0 0 0 $white;
+    transform: translateY(0px) rotate(45deg);
+  }
+  &::after {
+    transform: translateY(0px) rotate(-45deg);
+  }
+}
