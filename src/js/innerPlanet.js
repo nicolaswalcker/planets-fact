@@ -28,7 +28,7 @@ export const innerPlanet = (
   imageGeology
 ) => {
   htmlPlanetName.innerHTML = planetName;
-  setAttributes(htmlInitialImage, { src: `${imageInitial}`, alt: planetName });
+  setAttributes(htmlInitialImage, { src: imageInitial, alt: planetName });
   htmlContent.innerHTML = overviewContent;
   htmlRotationTime.innerHTML = planetRotation;
   htmlRevolutionTime.innerHTML = planetRevolution;
@@ -43,7 +43,6 @@ export const innerPlanet = (
         case "overview":
           htmlContent.innerHTML = overviewContent;
           setAttributes(htmlSource, { href: overviewSource, target: "_blank" });
-
           imageGeology.classList.remove("image-active");
           imageInternal.classList.remove("image-active");
           htmlContentOptions[i].checked = true;
@@ -52,13 +51,15 @@ export const innerPlanet = (
         case "structure":
           htmlContent.innerHTML = structureContent;
           setAttributes(htmlSource, { href: structureSource, target: "_blank" });
-          /* imageGeology.classList.remove("image-active");
-          imageInternal.classList.add("image-active"); */
+          setAttributes(htmlInternalImage, { src: imageInternal, alt: `Internal image of ${planetName}` });
+          imageGeology.classList.remove("image-active");
+          imageInternal.classList.add("image-active");
           htmlContentOptions[i].checked = true;
           break;
         case "geology":
           htmlContent.innerHTML = geologyContent;
           setAttributes(htmlSource, { href: geologySource, target: "_blank" });
+          setAttributes(htmlGeologyImage, { src: imageGeology, alt: `Geology image of ${planetName}` });
           imageGeology.classList.add("image-active");
           imageInternal.classList.remove("image-active");
           htmlContentOptions[i].checked = true;

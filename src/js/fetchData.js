@@ -14,6 +14,7 @@ const fetchData = async () => {
         planet.addEventListener("change", (e) => {
           const index = e.target.value;
           const planet = planets[index];
+          console.log(planet);
           renderPlanet(planet);
         });
       });
