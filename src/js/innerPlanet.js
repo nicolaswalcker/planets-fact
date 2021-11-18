@@ -10,7 +10,7 @@ const htmlRotationTime = document.querySelector(".js-rotation");
 const htmlRevolutionTime = document.querySelector(".js-revolution");
 const htmlRadius = document.querySelector(".js-radius");
 const htmlAverageTemp = document.querySelector(".js-temperature");
-
+const favicon = document.querySelector(".js-favicon")
 export const innerPlanet = (
   planetName,
   overviewContent,
@@ -29,12 +29,13 @@ export const innerPlanet = (
 ) => {
   htmlPlanetName.innerHTML = planetName;
   setAttributes(htmlInitialImage, { src: imageInitial, alt: planetName });
+  setAttributes(favicon, { href: imageInitial});
   htmlContent.innerHTML = overviewContent;
   htmlRotationTime.innerHTML = planetRotation;
   htmlRevolutionTime.innerHTML = planetRevolution;
   htmlRadius.innerHTML = planetRadius;
   htmlAverageTemp.innerHTML = planetTemperature;
-
+  document.title = `${planetName} - Planetarium`;
   htmlContentOptions[0].checked = true;
   for (let i = 0; i < htmlContentOptions.length; i++) {
     htmlContentOptions[i].addEventListener("change", (event) => {
