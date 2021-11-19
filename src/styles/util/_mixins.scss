@@ -27,18 +27,18 @@
   &::before {
     transition: all 0.2s ease-in-out;
     @include breakpoint(small-up) {
-      @include navbarEffect(180%, 0, $color, 0);
+      @include navbarEffect(240%, 0, $color, 0);
     }
     @include breakpoint(large-up) {
-      @include navbarEffect(-210%, 0, $color, 0);
+      @include navbarEffect(-255%, 0, $color, 0);
     }
   }
   &:hover::before {
     @include breakpoint(small-up) {
-      @include navbarEffect(180%, 0, $color, 100%);
+      @include navbarEffect(240%, 0, $color, 100%);
     }
     @include breakpoint(large-up) {
-      @include navbarEffect(-210%, 0, $color, 100%);
+      @include navbarEffect(-255%, 0, $color, 100%);
     }
   }
 }
