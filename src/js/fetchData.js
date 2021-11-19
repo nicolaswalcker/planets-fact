@@ -1,5 +1,6 @@
 import renderPlanet from "./renderPlanet";
 const navbar = document.querySelector('.js-navbar');
+const mobileButton = document.querySelector('.js-mobile');
 const url =
   "https://raw.githubusercontent.com/nicolaswalcker/planets-fact/main/data.json";
 const planetIndex = document.getElementsByName("radio");
@@ -13,10 +14,10 @@ const fetchData = async () => {
       renderPlanet(initial);
       planetIndex.forEach((planet) => {
         planet.addEventListener("change", (e) => {
-          navbar.classList.remove("u-navbar--active");
+          mobileButton.classList.toggle('u-button--active');
+          navbar.classList.toggle("u-navbar--active");
           const index = e.target.value;
           const planet = planets[index];
-          console.log(planet);
           renderPlanet(planet);
         });
       });

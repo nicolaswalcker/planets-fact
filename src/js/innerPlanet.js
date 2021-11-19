@@ -37,6 +37,7 @@ export const innerPlanet = (
   htmlAverageTemp.innerHTML = planetTemperature;
   document.title = `${planetName} - Planetarium`;
   htmlContentOptions[0].checked = true;
+
   for (let i = 0; i < htmlContentOptions.length; i++) {
     htmlContentOptions[i].addEventListener("change", (event) => {
       const index = event.target.value;
@@ -67,4 +68,5 @@ export const innerPlanet = (
       }
     });
   }
+
 };
