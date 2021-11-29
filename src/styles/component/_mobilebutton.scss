@@ -1,0 +1,21 @@
+.c-mobile__button {
+  @include breakpoint(small-up) {
+    display: none;
+  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  transition: 0.2s all ease;
+
+  @include resetButton;
+  &::before {
+    @include buttonConfig(-10px);
+    box-shadow: 0 10px 0 $white;
+  }
+  &::after {
+    @include buttonConfig(10px);
+  }
+}
