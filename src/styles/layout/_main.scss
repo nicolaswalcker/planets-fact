@@ -10,6 +10,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 10rem;
     padding: 5rem 2rem !important;
   }
 
@@ -17,6 +18,7 @@
     padding: 0rem 2.5rem;
   }
   .c-image__container {
+    display: inline-flex;
     position: relative;
     z-index: 0;
     display: flex;
@@ -24,7 +26,7 @@
     justify-content: center;
     height: 18.75rem;
     @include breakpoint(medium-up) {
-      width: 80%;
+      width: 60%;
     }
   }
   .c-planet__image {
@@ -33,7 +35,7 @@
       max-height: 70%;
     }
     @include breakpoint(medium-up) {
-      max-width: 100%;
+      max-width: 80%;
       max-height: 140%;
       object-fit: contain;
     }
@@ -44,12 +46,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   @include breakpoint(small-up) {
-    width: 50%;
+    width: 40%;
   }
   @include breakpoint(medium-up){
     align-items: flex-start;
     width: 100%;
+    max-width: 22rem;
+    height: 100%;
   }
   .c-planet__name {
     margin: 0;
@@ -68,9 +73,10 @@
     font-weight: normal;
     line-height: 200%;
     text-align: center;
+    height: 10rem;
     @include breakpoint(medium-up) {
       font-size: 0.875rem;
-      width: 70%;
+      margin-bottom: 0.75rem;
     }
   }
   .c-source__text {
