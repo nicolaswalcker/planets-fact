@@ -13,12 +13,12 @@
       href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="c-shooting-stars js-shooting-stars"></div>
     <header class="l-header">
       <h1 class="c-header__title u-uppercase">The planets</h1>
-
       <nav class="c-navbar js-navbar">
         <button class="c-mobile__button js-mobile"></button>
         <ul class="c-nav__menu">
@@ -114,12 +114,13 @@
       </nav>
     </header>
     <main class="l-main">
-      <img
+      <div class="c-image__container">
+        <img
         src="#"
         alt="Planet image"
         class="c-planet__image js-image--initial"
       />
-      <img
+      <!-- <img
         src="#"
         alt="Planet image"
         class="c-planet__content-image js-image--internal"
@@ -128,11 +129,14 @@
         src="#"
         alt="Planet image"
         class="c-planet__content-image js-image--geology"
-      />
-      <div class="c-planet__infos">
-        <h2 class="c-planet__name js-name"></h2>
-        <p class="c-planet__content js-content"></p>
-        <a href="" class="c-content__link js-link">Wikipedia</a>
+      /> -->
+      </div>
+      <div class="c-infos__content">
+        <div class="c-planet__infos">
+          <h2 class="c-planet__name js-name u-uppercase"></h2>
+          <p class="c-planet__content js-content"></p>
+          <p class="c-source__text">Source: <a href="" class="c-content__link js-link">Wikipedia <i class="fas fa-external-link-square-alt"></i> </a></p>
+        </div>
         <nav class="c-infos__nav">
           <ul class="c-info__items">
             <li class="c-info__item">

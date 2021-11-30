@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 // @see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
@@ -57,7 +59,6 @@ img[src$=".svg"] {
 label {
   cursor: pointer;
 }
-
 sup,
 sub {
   font-size: 50%;

@@ -1,0 +1,121 @@
+
+.l-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 1rem;
+  color: $white;
+  @include breakpoint(medium-up) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem !important;
+  }
+
+  @include breakpoint(small-up) {
+    padding: 0rem 2.5rem;
+  }
+  .c-image__container {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18.75rem;
+    @include breakpoint(medium-up) {
+      width: 80%;
+    }
+  }
+  .c-planet__image {
+    max-height: 60%;
+    @include breakpoint(small-up) {
+      max-height: 70%;
+    }
+    @include breakpoint(medium-up) {
+      max-width: 100%;
+      max-height: 140%;
+      object-fit: contain;
+    }
+  }
+}
+.c-planet__infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(small-up) {
+    width: 50%;
+  }
+  @include breakpoint(medium-up){
+    align-items: flex-start;
+    width: 100%;
+  }
+  .c-planet__name {
+    margin: 0;
+    font-family: "Antonio", Helvetica, Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    @include breakpoint(medium-up) {
+      font-size: 5rem;
+    }
+  }
+  .c-planet__content {
+    font-family: Spartan, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 200%;
+    text-align: center;
+    @include breakpoint(medium-up) {
+      font-size: 0.875rem;
+      width: 70%;
+    }
+  }
+  .c-source__text {
+    font-family: Spartan, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 208%;
+    color: white;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    @include breakpoint(medium-up) {
+      font-size: 0.875rem;
+    }
+  }
+  .c-content__link {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 0.8rem;
+
+  }
+}
+.c-planet__name,
+.c-planet__content,
+.c-source__text {
+  @include breakpoint(small-up) {
+    text-align: left !important;
+    align-self: flex-start !important;
+  }
+}
+.c-infos__content {
+  @include breakpoint(small-up) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  @include breakpoint(medium-up) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+  }
+}
+.c-info__items{
+  margin: 0;
+  padding: 0;
+}
