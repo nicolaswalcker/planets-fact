@@ -1352,11 +1352,11 @@ function hmrAcceptRun(bundle, id) {
     /* ---------- pJS - start ------------ */ pJS.fn.vendors.eventsListeners();
     pJS.fn.vendors.start();
 };
-/* ---------- global functions - vendors ------------ */ Object.deepExtend = function(destination, source) {
+/* ---------- global functions - vendors ------------ */ Object.deepExtend = function deepExtendFunction(destination, source) {
     for(var property in source)if (source[property] && source[property].constructor && source[property].constructor === Object) {
         destination[property] = destination[property] || {
         };
-        arguments.callee(destination[property], source[property]);
+        deepExtendFunction(destination[property], source[property]);
     } else destination[property] = source[property];
     return destination;
 };
