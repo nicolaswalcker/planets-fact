@@ -49,19 +49,20 @@
   .c-nav__item:nth-child(#{index($colors, $color)}) {
     @include navbarBefore($color);
   }
-  input[value="#{index($colors, $color) - 1}"]:checked + label {
+  .c-nav__button[value="#{index($colors, $color) - 1}"]:checked + label {
     color: $color;
   }
   .c-nav__item:nth-child(#{index($colors, $color)}) .c-dot {
     background-color: $color;
   }
 }
-
 .c-header__title {
   font-family: "Antonio", helvetica, arial, sans-serif;
   font-size: 1.75rem;
   font-weight: 400;
+  line-height: 2.25rem;
   color: $white;
+  letter-spacing: -0.065625rem;
 }
 .c-dot {
   display: none;

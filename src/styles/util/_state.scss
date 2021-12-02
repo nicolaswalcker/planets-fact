@@ -8,6 +8,10 @@
     transform: translateY(0px) rotate(-45deg);
   }
 }
+.c-planet__geology-image.image-active {
+  display: block;
+  visibility: visible;
+}
 .c-navbar.u-navbar--active .c-nav__menu {
   left: 0;
   width: 100%;

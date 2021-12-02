@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="./src/styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link class="js-favicon" rel="shortcut icon" href="#" type="image/x-icon">
+    <link class="js-favicon" rel="shortcut icon" href="#" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="c-shooting-stars js-shooting-stars"></div>
@@ -116,62 +122,68 @@
     <main class="l-main">
       <div class="c-image__container">
         <img
-        src="#"
-        alt="Planet image"
-        class="c-planet__image js-image--initial"
-      />
-      <!-- <img
-        src="#"
-        alt="Planet image"
-        class="c-planet__content-image js-image--internal"
-      />
+          src="#"
+          alt="Planet image"
+          class="c-planet__image js-image--initial"
+        />
       <img
         src="#"
         alt="Planet image"
-        class="c-planet__content-image js-image--geology"
-      /> -->
+        class="c-planet__geology-image js-image--geology"
+      />
       </div>
       <div class="c-infos__content">
         <div class="c-planet__infos">
           <h2 class="c-planet__name js-name u-uppercase"></h2>
           <p class="c-planet__content js-content"></p>
-          <p class="c-source__text">Source: <a href="" class="c-content__link js-link">Wikipedia <i class="fas fa-external-link-square-alt"></i> </a></p>
+          <p class="c-source__text">
+            Source:
+            <a href="" class="c-content__link js-link"
+              >Wikipedia <i class="fas fa-external-link-square-alt"></i>
+            </a>
+          </p>
         </div>
         <nav class="c-infos__nav">
           <ul class="c-info__items">
             <li class="c-info__item">
-              <label class="c-info__item--label" for="overview"
-                ><span class="c-info__item--number">01</span
-                ><span class="c-info__item--text">overview</span>
-                <input
-                  type="radio"
-                  name="info-button"
-                  id="overview"
-                  value="overview"
-                />
+              <input
+                type="radio"
+                name="info-button"
+                id="overview"
+                value="overview"
+              />
+              <label class="c-info__item--label js-overview" id="js-overview" for="overview"
+                ><span class="c-info__item--number u-uppercase">01</span
+                ><span class="c-info__item--text u-uppercase">overview</span>
               </label>
             </li>
             <li class="c-info__item">
-              <label class="c-info__item--label" for="structure"
-                ><span class="c-info__item--number">02</span
-                ><span class="c-info__item--text">internal structure</span>
-                <input
-                  type="radio"
-                  name="info-button"
-                  id="structure"
-                  value="structure"
-              /></label>
+              <input
+                type="radio"
+                name="info-button"
+                id="structure"
+                value="structure"
+              />
+              <label class="c-info__item--label js-structure" id="js-structure" for="structure"
+                ><span class="c-info__item--number u-uppercase">02</span
+                ><span class="c-info__item--text u-uppercase"
+                  >internal structure</span
+                ></label
+              >
             </li>
             <li class="c-info__item">
-              <label class="c-info__item--label" for="surface"
-                ><span class="c-info__item--number">03</span
-                ><span class="c-info__item--text">surface geology</span>
-                <input
-                  type="radio"
-                  name="info-button"
-                  id="surface"
-                  value="geology"
-              /></label>
+              <input
+                type="radio"
+                name="info-button"
+                id="surface"
+                value="geology"
+              />
+              <label class="c-info__item--label js-surface" id="js-surface" for="surface"
+                ><span class="c-info__item--number u-uppercase">03</span
+                ><span class="c-info__item--text u-uppercase"
+                  >surface geology</span
+                ></label
+              >
             </li>
           </ul>
         </nav>

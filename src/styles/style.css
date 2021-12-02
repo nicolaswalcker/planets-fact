@@ -14,6 +14,9 @@
   text-transform: uppercase;
 }
 
+/* :root{
+  --new-color:red;
+} */
 .c-mobile__button.u-button--active {
   z-index: 11;
 }
@@ -28,6 +31,11 @@
 .c-mobile__button.u-button--active::after {
   -webkit-transform: translateY(0px) rotate(-45deg);
           transform: translateY(0px) rotate(-45deg);
+}
+
+.c-planet__geology-image.image-active {
+  display: block;
+  visibility: visible;
 }
 
 .c-navbar.u-navbar--active .c-nav__menu {
@@ -552,7 +560,7 @@ input {
         -ms-flex-pack: justify;
             justify-content: space-between;
     gap: 10rem;
-    padding: 5rem 2rem !important;
+    padding: 3rem 4rem !important;
   }
 }
 
@@ -563,11 +571,11 @@ input {
 }
 
 .l-main .c-image__container {
+  position: relative;
+  z-index: 0;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  position: relative;
-  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -580,28 +588,58 @@ input {
   height: 18.75rem;
 }
 
+@media (min-width: 37.5em) {
+  .l-main .c-image__container {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width: 56.25em) {
   .l-main .c-image__container {
     width: 60%;
   }
 }
 
-.l-main .c-planet__image {
-  max-height: 60%;
-}
-
-@media (min-width: 37.5em) {
-  .l-main .c-planet__image {
-    max-height: 70%;
-  }
+.l-main .c-planet__image,
+.l-main .c-planet__content-image {
+  max-height: 70%;
 }
 
 @media (min-width: 56.25em) {
-  .l-main .c-planet__image {
+  .l-main .c-planet__image,
+  .l-main .c-planet__content-image {
     max-width: 80%;
     max-height: 140%;
     -o-object-fit: contain;
        object-fit: contain;
+  }
+}
+
+.c-planet__geology-image {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  max-width: 35%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (min-width: 56.25em) {
+  .c-planet__geology-image {
+    top: 100%;
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 37.5em) {
+  .c-planet__name,
+  .c-planet__content,
+  .c-source__text {
+    -ms-flex-item-align: start !important;
+        align-self: flex-start !important;
+    text-align: left !important;
   }
 }
 
@@ -640,10 +678,10 @@ input {
 
 .c-planet__infos .c-planet__name {
   margin: 0;
+  margin-bottom: 0.75rem;
   font-family: "Antonio", Helvetica, Arial, sans-serif;
   font-size: 2.5rem;
   font-weight: normal;
-  margin-bottom: 0.75rem;
 }
 
 @media (min-width: 56.25em) {
@@ -653,31 +691,32 @@ input {
 }
 
 .c-planet__infos .c-planet__content {
+  height: 11rem;
+  overflow-y: auto;
   font-family: Spartan, Helvetica, Arial, sans-serif;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: normal;
   line-height: 200%;
   text-align: center;
-  height: 10rem;
 }
 
 @media (min-width: 56.25em) {
   .c-planet__infos .c-planet__content {
-    font-size: 0.875rem;
     margin-bottom: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 
 .c-planet__infos .c-source__text {
   font-family: Spartan, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.75rem;
   line-height: 208%;
   color: white;
-  mix-blend-mode: normal;
   opacity: 0.5;
+  mix-blend-mode: normal;
 }
 
 @media (min-width: 56.25em) {
@@ -687,20 +726,10 @@ input {
 }
 
 .c-planet__infos .c-content__link {
+  font-size: 0.8rem;
+  font-weight: bold;
   color: white;
   text-decoration: underline;
-  font-weight: bold;
-  font-size: 0.8rem;
-}
-
-@media (min-width: 37.5em) {
-  .c-planet__name,
-  .c-planet__content,
-  .c-source__text {
-    text-align: left !important;
-    -ms-flex-item-align: start !important;
-        align-self: flex-start !important;
-  }
 }
 
 @media (min-width: 37.5em) {
@@ -708,9 +737,9 @@ input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -727,13 +756,150 @@ input {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    width: 40%;
+  }
+}
+
+.c-infos__nav {
+  width: 100%;
+}
+
+@media (min-width: 37.5em) {
+  .c-infos__nav {
     width: 50%;
   }
 }
 
+@media (min-width: 56.25em) {
+  .c-infos__nav {
+    width: 90%;
+    min-width: 70%;
+  }
+}
+
 .c-info__items {
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   padding: 0;
+  margin: 0;
+  gap: 0.75rem;
+}
+
+@media (min-width: 37.5em) {
+  .c-info__items {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .c-info__items {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.c-info__item {
+  width: 95%;
+}
+
+@media (min-width: 37.5em) {
+  .c-info__item {
+    width: 100%;
+  }
+}
+
+.c-info__item--label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  padding: 0.85rem 2rem;
+  border: 1px solid #38384f;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  gap: 1.5rem;
+}
+
+.c-info__item--label:hover {
+  background-color: #38384f;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.c-info__item--number {
+  opacity: 0.5;
+}
+
+.c-info__item--number,
+.c-info__item--text {
+  font-family: Spartan, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 208%;
+  text-align: left;
+  letter-spacing: 2.57143px;
+}
+
+body.is-mercury input:checked + .c-info__item--label {
+  background-color: #419ebb;
+  border: transparent;
+}
+
+body.is-venus input:checked + .c-info__item--label {
+  background-color: #eda249;
+  border: transparent;
+}
+
+body.is-earth input:checked + .c-info__item--label {
+  background-color: #2d68f0;
+  border: transparent;
+}
+
+body.is-mars input:checked + .c-info__item--label {
+  background-color: #d14c32;
+  border: transparent;
+}
+
+body.is-jupiter input:checked + .c-info__item--label {
+  background-color: #d83a34;
+  border: transparent;
+}
+
+body.is-saturn input:checked + .c-info__item--label {
+  background-color: #cd5120;
+  border: transparent;
+}
+
+body.is-uranus input:checked + .c-info__item--label {
+  background-color: #1ec1a2;
+  border: transparent;
+}
+
+body.is-neptune input:checked + .c-info__item--label {
+  background-color: #6d2ed5;
+  border: transparent;
 }
 
 .c-mobile__button {
@@ -919,7 +1085,7 @@ input {
   }
 }
 
-input[value="0"]:checked + label {
+.c-nav__button[value="0"]:checked + label {
   color: #419ebb;
 }
 
@@ -984,7 +1150,7 @@ input[value="0"]:checked + label {
   }
 }
 
-input[value="1"]:checked + label {
+.c-nav__button[value="1"]:checked + label {
   color: #eda249;
 }
 
@@ -1049,7 +1215,7 @@ input[value="1"]:checked + label {
   }
 }
 
-input[value="2"]:checked + label {
+.c-nav__button[value="2"]:checked + label {
   color: #2d68f0;
 }
 
@@ -1114,7 +1280,7 @@ input[value="2"]:checked + label {
   }
 }
 
-input[value="3"]:checked + label {
+.c-nav__button[value="3"]:checked + label {
   color: #d14c32;
 }
 
@@ -1179,7 +1345,7 @@ input[value="3"]:checked + label {
   }
 }
 
-input[value="4"]:checked + label {
+.c-nav__button[value="4"]:checked + label {
   color: #d83a34;
 }
 
@@ -1244,7 +1410,7 @@ input[value="4"]:checked + label {
   }
 }
 
-input[value="5"]:checked + label {
+.c-nav__button[value="5"]:checked + label {
   color: #cd5120;
 }
 
@@ -1309,7 +1475,7 @@ input[value="5"]:checked + label {
   }
 }
 
-input[value="6"]:checked + label {
+.c-nav__button[value="6"]:checked + label {
   color: #1ec1a2;
 }
 
@@ -1374,7 +1540,7 @@ input[value="6"]:checked + label {
   }
 }
 
-input[value="7"]:checked + label {
+.c-nav__button[value="7"]:checked + label {
   color: #6d2ed5;
 }
 
@@ -1386,7 +1552,9 @@ input[value="7"]:checked + label {
   font-family: "Antonio", helvetica, arial, sans-serif;
   font-size: 1.75rem;
   font-weight: 400;
+  line-height: 2.25rem;
   color: white;
+  letter-spacing: -0.065625rem;
 }
 
 .c-dot {
