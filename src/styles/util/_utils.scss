@@ -9,3 +9,12 @@
 .u-uppercase {
   text-transform: uppercase;
 }
+#particles-js {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -5;
+  width: 100%;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+}

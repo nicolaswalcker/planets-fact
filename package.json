@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
-    "parcel": "^2.0.1"
+    "parcel": "^2.0.1",
+    "particles.js": "^2.0.0"
   }
 }
