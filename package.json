@@ -1,7 +1,7 @@
 {
-  "name": "basic-project-template",
+  "name": "Planetarium",
   "version": "1.0.0",
-  "description": "Template for little and basic projects.",
+  "description": "A website that shows information about the planets of the solar system.",
   "repository": "https://github.com/nicolaswalcker/basic-project-template",
   "author": "Nicolas Walcker",
   "license": "MIT",
