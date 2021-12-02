@@ -196,6 +196,13 @@
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/plugin-syntax-flow" "^7.16.0"
 
+"@babel/plugin-transform-strict-mode@^7.16.0":
+  version "7.16.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-strict-mode/-/plugin-transform-strict-mode-7.16.0.tgz#2be5ad4f087c188cfed6f01e327a9ccd4dc0c488"
+  integrity sha512-lcLX2TEX4EI5fRQDV7dIWNJdLnyhVE7K5oHZkKpo/lnOP+7LdkrV9v/enjBxts+xLn56TGf6zbyB2rvYl1zbYQ==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.14.5"
+
 "@babel/template@^7.16.0":
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.16.0.tgz#d16a35ebf4cd74e202083356fab21dd89363ddd6"
