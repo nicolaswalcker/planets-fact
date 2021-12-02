@@ -141,6 +141,7 @@
   @include breakpoint(medium-up) {
     width: 90%;
     min-width: 70%;
+    white-space: nowrap;
   }
 }
 .c-info__items {
